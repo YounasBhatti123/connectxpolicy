@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Buttons</title>
+    <style>
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            min-height: 200px;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <img src="connectx.png" alt="Company Logo" style="width: 150px; height: auto; display: block; margin: 0 auto;">
+    <h2>ConnectX HR Policies</h2>
+    <div class="menu">
+        <button id="btn1" onclick="showContent(1)">Grievance Management Policy</button>
+        <button id="btn2" onclick="showContent(2)">Non Smoking and Vaping</button>
+        <button id="btn3" onclick="showContent(3)">Use of Company Resources</button>
+        <button id="btn4" onclick="showContent(4)">Attendance Management Policy</button>
+        <button id="btn5" onclick="showContent(5)">Social Media Policy</button>
+    </div>
+    
+    <div id="content">
+        <!-- Content will be displayed here -->
+    </div>
+
+    <script>
+        function showContent(buttonId) {
+            var contentDiv = document.getElementById('content');
+            var content = '';
+
+            switch(buttonId) {
+                case 1:
+                    content = `
+                    <h2>Grievance Management Policy</h2>
+                    <h3>Purpose</h3>
+                    <p>This policy provides a systematic and transparent process for employees to raise formal or informal grievances related to their work environment or terms of employment. The company is committed to fostering an open and inclusive work environment where employees feel comfortable raising issues and are confident that their concerns will be addressed fairly and promptly.</p>
+                    <h3>Scope</h3>
+                    <p>This policy applies to all employees, regardless of position, tenure, or employment status. Grievances may include, but are not limited to:</p>
+                    <ul>
+                        <li>Harassment or discrimination</li>
+                        <li>Workplace conflicts</li>
+                        <li>Concerns about working conditions or safety</li>
+                        <li>Violations of company policies</li>
+                    </ul>
+                    <h3>Procedure</h3>
+                    <ol>
+                        <li><strong>Informal Resolution:</strong> Employees are encouraged to attempt informal resolution first. This may involve directly discussing the issue with the person involved, a supervisor, or a People Operations representative.</li>
+                        <li><strong>Formal Grievance:</strong> If informal resolution is unsuccessful or inappropriate, employees can submit a formal grievance.
+                            <ul>
+                                <li><strong>Submission:</strong> Grievances must be submitted in writing to the Head of People Operations and include:
+                                    <ul>
+                                        <li>Employee's name and contact information</li>
+                                        <li>Date of the incident(s)</li>
+                                        <li>Description of the grievance with specific details</li>
+                                        <li>Names of any involved individuals or witnesses</li>
+                                        <li>Desired resolution</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Acknowledgement:</strong> The designated party conducting the investigation (to be nominated by Head of People Operations) will acknowledge receipt of the formal grievance within 3 business days.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Investigation:</strong>
+                            <ul>
+                                <li>The designated party will conduct a thorough and impartial investigation, which may include:
+                                    <ul>
+                                        <li>Interviewing the employee, other involved parties, and witnesses</li>
+                                        <li>Reviewing relevant documents, policies, or records</li>
+                                        <li>Seeking external expertise if necessary</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Confidentiality:</strong> Investigations will be conducted with confidentiality to the extent possible.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Decision and Communication:</strong>
+                            <ul>
+                                <li>Upon completion, the designated party will provide a written decision to the employee outlining the findings and any corrective actions taken.</li>
+                                <li>The company aims to resolve grievances within 30 working days of receipt, but complex cases may require more time. Employees will be kept informed of progress.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Appeals:</strong>
+                            <ul>
+                                <li>If unsatisfied with the decision, the employee may appeal within 7 days to the CEO. The appeal decision will be final.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <p><strong>No Retaliation:</strong> The company strictly prohibits any form of retaliation against employees who raise a grievance in good faith.</p>
+                    <p><strong>Recordkeeping:</strong> Documentation of grievances, investigations, and resolutions will be maintained confidentially within People Operations.</p>
+                    <h3>Review</h3>
+                    <p>This policy will be reviewed regularly and updated as needed to ensure it remains effective, fair, and compliant with relevant laws and regulations.</p>`;
+                    break;
+                case 2:
+                content = `
+            <h2>Non-Smoking and Vaping Policy</h2>
+            <h3>Purpose</h3>
+            <p>This policy aims to protect all employees, visitors, and clients from the harmful effects of secondhand smoke and vapor and to create a healthier and more pleasant working environment for everyone.</p>
+            <h3>Scope</h3>
+            <p>This policy applies to all employees, contractors, clients, and visitors on all company premises, including:</p>
+            <ul>
+                <li>Indoor workspaces (offices, meeting rooms, restrooms, etc.)</li>
+                <li>Outdoor areas within the immediate vicinity of company buildings and entrances</li>
+                <li>Company-sponsored events (on or off-site)</li>
+            </ul>
+            <h3>Definitions</h3>
+            <ul>
+                <li><strong>Smoking:</strong> Includes the use of traditional cigarettes, cigars, pipes, or any other product that involves the burning of tobacco.</li>
+                <li><strong>Vaping:</strong> Includes using e-cigarettes, vaporizers, or any other electronic nicotine delivery system.</li>
+            </ul>
+            <h3>Policy</h3>
+            <ul>
+                <li>Smoking and vaping are strictly prohibited in all enclosed areas within the worksite as defined in the Scope section.</li>
+                <li>Smoking and vaping are only permitted in designated outdoor smoking areas, which are located away from building entrances, windows, and air intake vents.</li>
+                <li>Employees are expected to be respectful of non-smokers and to refrain from smoking or vaping in their vicinity, even in designated areas.</li>
+                <li>Employees are encouraged to use smoking breaks as an opportunity to take short walks or engage in other healthy activities.</li>
+            </ul>
+            <h3>Enforcement</h3>
+            <ul>
+                <li>Managers and supervisors are responsible for ensuring compliance with this policy.</li>
+                <li>Employees who violate this policy may be subject to disciplinary action, up to and including termination of employment.</li>
+                <li>Visitors or clients who refuse to comply with this policy may be asked to leave the premises.</li>
+            </ul>
+            <h3>Review</h3>
+            <p>This policy will be reviewed periodically and updated as needed.</p>`;
+            break;
+                   
+                    break;
+                case 3:
+                content = `
+            <h2>Use of Company Resources Policy</h2>
+            <h3>Purpose</h3>
+            <p>This policy outlines the appropriate and authorized use of company resources to ensure their effective utilization for business purposes, protecting the company's assets, and upholding employee responsibilities.</p>
+            <h3>Scope</h3>
+            <p>This policy applies to all employees, contractors, and third-party vendors who have access to or use company resources. Company resources include but are not limited to:</p>
+            <ul>
+                <li>Physical Assets: Equipment (computers, laptops, phones etc), office supplies, facilities, and inventory.</li>
+                <li>Intellectual Property: Trademarks, copyrights, patents, trade secrets, and confidential information.</li>
+                <li>Technology Resources: Software, networks, internet access, email, and company data.</li>
+            </ul>
+            <h3>Policy Guidelines</h3>
+            <ol>
+                <li><strong>Authorized Use:</strong> Company resources are provided for the primary purpose of conducting company business. Limited, reasonable personal use may be permitted if it does not interfere with job duties or productivity.</li>
+                <li><strong>Security and Responsibility:</strong>
+                    <ul>
+                        <li>Employees are responsible for safeguarding company resources from loss, theft, damage, or misuse.</li>
+                        <li>Report any suspected misuse, damage, or security breaches immediately to People Operations.</li>
+                        <li>Take precautions to protect sensitive information, including using strong passwords and being aware of cybersecurity risks.</li>
+                    </ul>
+                </li>
+                <li><strong>Internet and Email:</strong>
+                    <ul>
+                        <li>Company internet and email are intended for business purposes.</li>
+                        <li>Avoid accessing or distributing inappropriate, offensive, or illegal content.</li>
+                        <li>Do not engage in activities that could harm the company's reputation or expose it to liability.</li>
+                    </ul>
+                </li>
+                <li><strong>Software:</strong>
+                    <ul>
+                        <li>Only use company-approved and licensed software.</li>
+                        <li>Refrain from installing unauthorized software or downloading unauthorized files.</li>
+                    </ul>
+                </li>
+                <li><strong>Social Media:</strong>
+                    <ul>
+                        <li>When using social media in a professional capacity, adhere to the company's Social Media Policy.</li>
+                        <li>Do not disclose confidential company information or make discriminatory or offensive remarks online that could reflect poorly on the company.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Prohibited Uses</h3>
+            <p>The following activities are strictly prohibited:</p>
+            <ul>
+                <li>Using company resources for personal gain or commercial purposes outside of company business.</li>
+                <li>Engaging in illegal, unethical, or fraudulent activities using company resources.</li>
+                <li>Violating copyright or licensing agreements.</li>
+                <li>Accessing, transmitting, or storing sexually explicit, discriminatory, or otherwise offensive material.</li>
+                <li>Harassing, threatening, or intimidating others through company resources.</li>
+            </ul>
+            <h3>Monitoring</h3>
+            <p>The company reserves the right to monitor the use of company resources to ensure compliance with this policy and to investigate potential misuse. Monitoring may include reviewing internet activity, email, and phone records where employees have been provided with official phones/ SIM’s.</p>
+            <h3>Consequences of Violations</h3>
+            <p>Violating this policy may result in disciplinary action, up to and including termination of employment, and potential legal action if applicable.</p>
+            <h3>Acknowledgement</h3>
+            <p>All employees will be required to read and sign this policy, acknowledging their understanding and agreement to comply with its provisions.</p>
+            <h3>Review</h3>
+            <p>This policy will be reviewed periodically and updated as needed.</p>`;
+            break;
+                  
+                case 4:
+                content = `
+            <h2>Attendance Management Policy</h2>
+            <h3>Purpose</h3>
+            <p>This policy outlines company expectations regarding employee attendance, punctuality, and timekeeping. Regular and punctual attendance is essential for the efficient operation of the company and to ensure fairness among employees.</p>
+            <h3>Scope</h3>
+            <p>This policy applies to all employees, regardless of contractual status.</p>
+            <h3>Expectations</h3>
+            <ul>
+                <li><strong>Work Hours:</strong> Standard working hours are 9:00 am to 6:00 pm, Monday to Friday, Pakistan or UK time as per JD, Project or Contract, including a 1-hour lunch break. Employees may be required to work flexible hours, including overtime, based on business needs.</li>
+                <li><strong>Punctuality:</strong> Employees are expected to be at their workstations and ready to begin work at the designated start time.</li>
+                <li><strong>Lateness:</strong>
+                    <ul>
+                        <li>Occasional lateness of up to 10 minutes may be excused with prior notice to a supervisor if possible. Individual attendance reports will be shared with line managers by HR at the end of every month for reconciliation and correction if needed.</li>
+                        <li>Lateness exceeding 30 minutes will be considered an absence for a quarter portion of the workday.</li>
+                        <li>Frequent lateness, regardless of duration, may result in disciplinary action.</li>
+                    </ul>
+                </li>
+                <li><strong>Absences:</strong>
+                    <ul>
+                        <li>Planned absences (vacation, sick leave, etc.) must be approved in advance by the employee’s line manager on e-mail, and People Operations must be provided a copy of the e-mail for their record.</li>
+                        <li>Casual Leave can be taken for emergencies, and the line manager must be informed via any means before shift time.</li>
+                        <li>WFH can only be approved by the line manager at their discretion and upon application by the employee one day in advance. However, employees must submit a workplan and progress at the beginning and end of the day respectively to their line manager.</li>
+                        <li>Unplanned absences must be reported to HR by the respective line manager immediately.</li>
+                        <li>Excessive, unapproved, or unscheduled absences may result in disciplinary action.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Timekeeping</h3>
+            <ul>
+                <li>Employees are responsible for accurately recording their work hours using the company's designated biometric timekeeping system.</li>
+                <li>Falsifying time records is a serious offense and may result in termination of employment.</li>
+            </ul>
+            <h3>Disciplinary Actions</h3>
+            <p>Violations of this attendance policy may result in the following progressive disciplinary actions:</p>
+            <ul>
+                <li>Verbal Warning</li>
+                <li>Written Warning</li>
+                <li>Deduction of Pay</li>
+                <li>Suspension</li>
+                <li>Termination of Employment</li>
+            </ul>
+            <p>The severity of disciplinary action will depend on the frequency and severity of the attendance issue and any prior disciplinary records.</p>
+            <h3>Policy Review</h3>
+            <p>This policy may be reviewed and updated periodically. Employees will be notified of significant changes.</p>`;
+            break;
+                case 5:
+                content = `
+            <h2>Social Media Policy</h2>
+            <h3>Purpose</h3>
+            <p>This policy establishes guidelines for the use of social media by employees, both in their personal and professional capacities. It aims to protect the company's reputation, ensure responsible social media use, and clarify expectations for employees when engaging online.</p>
+            <h3>Scope</h3>
+            <p>This policy applies to all employees, contractors, and interns who represent the company or may be perceived as representing the company online.</p>
+            <h3>Guidelines</h3>
+            <ol>
+                <li><strong>Personal Social Media Use</strong>
+                    <ul>
+                        <li><strong>Be Respectful:</strong> Avoid online content or discussions that are discriminatory, harassing, offensive, or could damage the company's reputation.</li>
+                        <li><strong>Disclaimer:</strong> If you discuss work-related matters on personal accounts, include a disclaimer that your opinions are your own and do not represent the company's official views.</li>
+                        <li><strong>Transparency:</strong> Be honest about your identity and affiliation with the company if it's relevant to the social media conversation.</li>
+                        <li><strong>Protect Privacy:</strong> Avoid sharing confidential company information or private information about colleagues or clients.</li>
+                    </ul>
+                </li>
+                <li><strong>Professional Social Media Use</strong>
+                    <ul>
+                        <li><strong>Approval:</strong> Seek authorization before representing the company on official social media accounts.</li>
+                        <li><strong>Company Spokesperson:</strong> Only designated spokespersons are authorized to speak on behalf of the company on social media.</li>
+                        <li><strong>Accuracy and Responsibility:</strong> Ensure all information shared is accurate and aligns with company messaging. Take ownership of any errors and correct them promptly.</li>
+                        <li><strong>Professionalism:</strong> Maintain a professional tone and demeanor in all company-related social media interactions.</li>
+                        <li><strong>Customer Service:</strong> Address customer questions or concerns promptly and respectfully, escalating to appropriate departments when necessary.</li>
+                    </ul>
+                </li>
+                <li><strong>General Guidelines</strong>
+                    <ul>
+                        <li><strong>Compliance:</strong> Adhere to all applicable laws, regulations, and intellectual property rights when using social media.</li>
+                        <li><strong>Confidentiality:</strong> Never disclose confidential company information, trade secrets, or nonpublic information on social media.</li>
+                        <li><strong>Copyright and Trademarks:</strong> Respect copyright laws and avoid using third-party trademarks without permission.</li>
+                        <li><strong>Monitoring:</strong> The company reserves the right to monitor social media activity that could impact its reputation or interests.</li>
+                        <li><strong>Crisis Management:</strong> Be aware of social media's role in crisis situations and report any urgent or sensitive issues to your line manager or senior management.</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Consequences of Violations</h3>
+            <p>Violations of this policy may result in disciplinary action, up to and including termination of employment.</p>
+            <h3>Empowering Social Media Advocacy</h3>
+            <p>The company encourages employees to be positive brand ambassadors online. Here's how you can participate:</p>
+            <ul>
+                <li><strong>Share Approved Content:</strong> Share company-approved content on social media responsibly.</li>
+                <li><strong>Engage Thoughtfully:</strong> Engage in respectful conversations about our industry or areas of expertise.</li>
+                <li><strong>Report Issues:</strong> If you encounter negative comments or content about the company, report them to your line manager/Head of Department or People Operations.</li>
+            </ul>
+            <h3>Review</h3>
+            <p>This policy will be reviewed and updated regularly to reflect changes in the social media landscape and best practices.</p>`;
+            break;
+                    break;
+                default:
+                    content = 'No content available';
+            }
+
+            contentDiv.innerHTML = content;
+        }
+    </script>
+</body>
+</html>
