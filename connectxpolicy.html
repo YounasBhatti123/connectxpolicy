@@ -24,11 +24,31 @@
         h2 {
             text-align: center;
         }
+        
+        .header {
+        
+            padding: 10px;
+            text-align: right; /* Align buttons to the right */
+        }
+
+        .header button {
+            background-color: #fff;
+            color: #333;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px; /* Add margin between buttons */
+        }
     </style>
 </head>
 
 <body>
 
+   
+    <div class="header">
+        <button onclick="logout()">Logout</button>
+    </div>
 
     <img src="connectx.png" alt="Company Logo" style="width: 150px; height: auto; display: block; margin: 0 auto;">
     <h2>ConnectX HR Policies</h2>
@@ -305,6 +325,11 @@
             }
 
             contentDiv.innerHTML = content;
+
+      
+        }
+        function logout() {
+            window.location.href = 'index.html'; // Replace 'login.html' with your actual login page URL
         }
     </script>
 </body>
